@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="room-list">
+    <div class="room-list-header">
+        <h2>Register</h2>
+    </div>
+    <div class="room-list-body">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% comment %} {{form.as_p}} {% endcomment %}
+            <label>Username:</label>
+            <input type="text" name="username" placeholder="Username" />
+
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" />
+
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
